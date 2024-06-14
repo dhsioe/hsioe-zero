@@ -15,7 +15,7 @@
     }
   ],
   "require": {
-    "php": ">=7.2",
+    "php": ">=8.0",
     "workerman/webman-framework": "^1.5.0",
     "monolog/monolog": "^2.0",
     "webman/admin": "^0.6.27",
@@ -44,9 +44,6 @@
     ]
   },
   "scripts": {
-    "pre-install-cmd": [
-       "Install"
-    ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
