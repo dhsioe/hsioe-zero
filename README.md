@@ -5,7 +5,6 @@
 - 后台管理
 - 定时任务
 - 异步任务（基于[hsioe-job](https://github.com/dhsioe/jobs)）
-- 消息推送 (基于[hsioe-push]())
 - 自定义配置
 - 二级缓存 (基于 yac 构建更适合高吞吐量的数据缓存)
 
@@ -15,13 +14,41 @@
 
 早起量化交易服务模块掺杂太多的子模块和依赖且大部分都是引用方式，导致维护成本逐步变高，服务组件化势在必行，于是诞生了设计一个脚手架并且用脚手架重构量化交易系统的想法！
 
-## 快速开始 
+## 安装
 
-composer require `hsioe/zero`
+使用 [composer](https://getcomposer.org/download/) 来搭建一个基于`hsioe-zero`脚手架的项目非常简单, 运行以下命令即可完成
+```sh
+composer create-project "hsioe/zero" ./
+```
 
 确保脚手架的所有主键能正常运行，建议`php环境 >= 8.1`
 
-## 目录结构
+## 快速开始
+
+安装完成后,系统会再根目录生成 `.env` 文件，需要你自行配置本地的数据库信息
+```angular2html
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=test
+DB_USER=foo
+DB_PASSWORD=123456
+```
+
+相关配置完成后，运行以下命令
+
+- windos用户
+```angular2html
+cd /you_project;
+php windows.php
+```
+
+- Linux / Mac 用户
+```angular2html
+cd /you_project;
+php start.php start
+```
+
+执行完以上命令后，浏览器打开 http://localhost:8788/app/admin 看到以下界面即为安装成功
 
 ## 更新日志
  - 2024-06-14 发布v1.0.0版本
