@@ -1,59 +1,27 @@
-<div style="padding:18px;max-width: 1024px;margin:0 auto;background-color:#fff;color:#333">
-<h1>webman</h1>
+# hsioe-zero
 
-基于<a href="https://www.workerman.net" target="__blank">workerman</a>开发的超高性能PHP框架
+`hsioe-zero` 是基于webman配置的服务端快速启动脚手架
 
+- 后台管理
+- 定时任务
+- 异步任务（基于[hsioe-job](https://github.com/dhsioe/jobs)）
+- 消息推送 (基于[hsioe-push]())
+- 自定义配置
+- 二级缓存 (基于 yac 构建更适合高吞吐量的数据缓存)
 
-<h1>学习</h1>
+## 前言
 
-<ul>
-  <li>
-    <a href="https://www.workerman.net/webman" target="__blank">主页 / Home page</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/doc/webman" target="__blank">文档 / Document</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/doc/webman/install.html" target="__blank">安装 / Install</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/questions" target="__blank">问答 / Questions</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/apps" target="__blank">市场 / Apps</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/sponsor" target="__blank">赞助 / Sponsors</a>
-  </li>
-  <li>
-    <a href="https://www.workerman.net/doc/webman/thanks.html" target="__blank">致谢 / Thanks</a>
-  </li>
-</ul>
+项目诞生背景是想借助组件化方式重构当前正在运行的 量化交易程序。
 
-<div style="float:left;padding-bottom:30px;">
+早起量化交易服务模块掺杂太多的子模块和依赖且大部分都是引用方式，导致维护成本逐步变高，服务组件化势在必行，于是诞生了设计一个脚手架并且用脚手架重构量化交易系统的想法！
 
-  <h1>赞助商</h1>
+## 快速开始 
 
-  <h4>特别赞助</h4>
-  <a href="https://www.crmeb.com/?form=workerman" target="__blank">
-    <img src="https://www.workerman.net/img/sponsors/6429/20230719111500.svg" width="200">
-  </a>
+composer require `hsioe/zero`
 
-  <h4>铂金赞助</h4>
-  <a href="https://www.fadetask.com/?from=workerman" target="__blank"><img src="https://www.workerman.net/img/sponsors/1/20230719084316.png" width="200"></a>
-  <a href="https://www.yilianyun.net/?from=workerman" target="__blank" style="margin-left:20px;"><img src="https://www.workerman.net/img/sponsors/6218/20230720114049.png" width="200"></a>
+确保脚手架的所有主键能正常运行，建议`php环境 >= 8.1`
 
-  <h4>金牌赞助</h4>
+## 目录结构
 
-
-</div>
-
-
-<div style="clear: both">
-<h1>LICENSE</h1>
-The webman is open-sourced software licensed under the MIT.
-</div>
-
-</div>
-
-
+## 更新日志
+ - 2024-06-14 发布v1.0.0版本
