@@ -117,11 +117,11 @@ return  [
     'connections' => [
         'mysql' => [
             'driver'      => 'mysql',
-            'host'        => '$host',
-            'port'        => '$port',
-            'database'    => '$database',
-            'username'    => '$user',
-            'password'    => '$password',
+            'host'        => env('DB_HOST','$host'),
+            'port'        => env('DB_PORT','$port'),
+            'database'    => env('DB_NAME','$database'),
+            'username'    => env('DB_USER','$user'),
+            'password'    => env('DB_PASSWORD','$password'),
             'charset'     => 'utf8mb4',
             'collation'   => 'utf8mb4_general_ci',
             'prefix'      => '',

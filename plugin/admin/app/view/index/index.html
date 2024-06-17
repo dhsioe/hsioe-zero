@@ -109,10 +109,11 @@
                 Account: {}
             };
 
-            layui.use(["admin","jquery","popup","drawer"], function() {
+            layui.use(["admin","jquery","popup","drawer", 'notice'], function() {
                 var $ = layui.$;
                 var admin = layui.admin;
                 var popup = layui.popup;
+                let notice = layui.notice;
 
                 admin.setConfigType("json");
                 admin.setConfigPath("/app/admin/config/get");
