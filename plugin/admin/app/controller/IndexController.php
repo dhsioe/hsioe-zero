@@ -48,7 +48,7 @@ class IndexController
             $logo = $config['logo']['image'] ?? '/app/admin/admin/images/logo.png';
             return raw_view('account/login',['logo'=>$logo,'title'=>$title]);
         }
-        return raw_view('index/index');
+        return raw_view('index/index',['push'=>config('plugin.webman.push.app')]);
     }
 
     /**

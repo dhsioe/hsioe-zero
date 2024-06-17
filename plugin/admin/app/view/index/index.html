@@ -98,10 +98,13 @@
 
             const API = {
                 push: {
-                    url: 'ws://192.168.1.17:3131', // websocket地址
-                    app_key: 'fb9c9961c2cb22bd6518f7d6f38a5af8',
-                    auth: '/plugin/webman/push/auth'
-                },
+                    // websocket地址
+                    url: "<?=$push['client_ws']?>",
+                    // app_key
+                    app_key: "<?=$push['app_key']?>",
+                    // auth地址
+                    auth: "<?=$push['auth']?>"
+                }
             };
 
             // Admin
@@ -109,11 +112,12 @@
                 Account: {}
             };
 
-            layui.use(["admin","jquery","popup","drawer", 'notice'], function() {
+            layui.use(["admin","jquery","popup","drawer", 'notice','element'], function() {
                 var $ = layui.$;
                 var admin = layui.admin;
                 var popup = layui.popup;
                 let notice = layui.notice;
+                let element = layui.element;
 
                 admin.setConfigType("json");
                 admin.setConfigPath("/app/admin/config/get");
@@ -212,11 +216,7 @@
                         }
                     });
                 }
-
                 connect();
-
-                // 消息点击回调
-                //admin.message(function(id, title, context, form) {});
             });
 
         </script>
