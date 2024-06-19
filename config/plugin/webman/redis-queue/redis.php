@@ -1,7 +1,7 @@
 <?php
 return [
     'default' => [
-        'host' => 'redis://127.0.0.1:6379',
+        'host' => 'redis://192.168.1.17:6379',
         'options' => [
             'auth' => null,       // 密码，字符串类型，可选参数
             'db' => 0,            // 数据库

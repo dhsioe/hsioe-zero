@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  hsioe-zero:
+    image: hsioe/zero:1.0
+    container_name: "hsioe-zero-app"
+    restart: always
+    ports:
+      - 8788:8788
+      - 3131:3131
+
+    volumes:
+      - ../:/app
+
+    networks:
+      - "hsioe-zero-app"
+
+networks:
+  hsioe-zero-app:
+    driver: bridge

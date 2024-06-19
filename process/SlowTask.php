@@ -15,7 +15,6 @@ class SlowTask
     public function onWorkerStart(): void
     {
         new Crontab('*/1 * * * * *', function(){
-            echo 'SLOW-TASK: '.date('Y-m-d H:i:s', time()).PHP_EOL;
         });
     }
     
