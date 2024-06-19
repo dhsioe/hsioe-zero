@@ -47,8 +47,15 @@ php windows.php
 cd /you_project;
 php start.php start
 ```
+- docker
 
-执行完以上命令后，浏览器打开 http://localhost:8788/app/admin 看到以下界面即为安装成功
+基于在 `windows`平台下开发调试YAC缓存存在兼容性问题，小伙伴也可以尝试使用[docker]()来部署本地环境，镜像已经配好,运行以下命令即可快速启动
+```dockerfile
+docker-compose -f ./deploy/docker-compose.yml up -d
+```
+
+执行完以上命令后，浏览器打开 http://127.0.0.1:8788/app/admin 看到以下界面即为安装成功
 
 ## 更新日志
+ - 2024/06/19 发布1.0.4版本
  - 2024-06-14 发布v1.0.0版本
